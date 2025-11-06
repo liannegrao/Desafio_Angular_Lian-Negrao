@@ -1,0 +1,147 @@
+:host {
+  display: block;
+  height: 99vh;
+  overflow: hidden; /* impede barra de rolagem dentro do componente */
+}
+
+
+.dashboard-container {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background-color: #ffffff;
+  height: 100%;
+}
+
+h1 {
+  color: #003399;
+  margin-bottom: 30px;
+}
+
+/* ---- Layout superior ---- */
+.top-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+/* Seleção de veículo */
+.select-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.select-section label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.select-section select {
+  width: 180px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+/* ---- Cards ---- */
+.info-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.card p {
+  margin: 0 0 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.card h2 {
+  color: #003399;
+  margin: 0;
+  font-size: 22px;
+}
+
+.card span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ---- Imagem ---- */
+.vehicle-image {
+  margin: 20px 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.vehicle-image img {
+  width: 800px;
+  height: auto;
+}
+
+/* ---- Tabela ---- */
+.table-section {
+  margin-top: 60px;
+}
+
+.search-input {
+  width: 250px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 8px;
+  margin-bottom: 12px;
+}
+
+table {
+  width: 95%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #003399;
+  color: #fff;
+}
+
+th {
+  padding: 10px;
+}
+
+tbody td {
+  background-color: #f5f5f5;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #e8e8e8;
+}
+
+/* Ícone do menu */
+.ph-list {
+  font-size: 2.5rem; /* aumenta o tamanho */
+  color: #23cf49;    /* azul Ford */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}

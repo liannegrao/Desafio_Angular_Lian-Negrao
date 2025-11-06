@@ -1,0 +1,68 @@
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
+/>
+
+<main class="login-container">
+  <section class="left-side">
+    <img src="img/ranger.png" alt="Ford Ranger" class="car-img" />
+  </section>
+
+  <section class="right-side">
+    <div class="form-box">
+      <img src="img/ford.png" alt="Ford Logo" class="ford-logo" />
+      <h3 class="welcome-text">Boas-vindas</h3>
+
+      <form>
+        <div class="input-group mb-3">
+          <i class="ph ph-user icon-input"></i>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Insira seu e-mail"
+            required
+          />
+          <button type="button" class="field-info" aria-label="Informações e-mail">
+            <i class="ph ph-info"></i>
+          </button>
+        </div>
+
+        <div class="input-group mb-3">
+          <i class="ph ph-lock icon-input"></i>
+          <input
+            [type]="mostrarSenha ? 'text' : 'password'"
+            class="form-control"
+            placeholder="Insira sua senha"
+            required
+          />
+
+          <i
+            class="ph toggle-password"
+            [ngClass]="mostrarSenha ? 'ph-eye' : 'ph-eye-slash'"
+            (click)="toggleSenha()"
+          ></i>
+        </div>
+
+        <div class="form-check form-switch mb-3 text-start">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="logarAuto"
+          />
+          <label class="form-check-label" for="logarAuto">
+            Logar automaticamente
+          </label>
+          <button type="button" class="field-info field-info--small" aria-label="Informações senha">
+          </button>
+          <button type="button" class="switch-info" aria-label="Informações logar automaticamente">
+            <i class="ph ph-info"></i>
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-primary w-100" (click)="entrar()">
+          Entrar
+        </button>
+      </form>
+    </div>
+  </section>
+</main>

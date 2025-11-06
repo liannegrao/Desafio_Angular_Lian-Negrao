@@ -1,0 +1,69 @@
+.home-container {
+  /* usa ranger.png como background */
+  background-image: url('/img/ranger.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 99vh; /* ocupa toda a altura da tela */
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /* centraliza vertical */
+  position: relative;
+}
+
+/* O CARD (A caixa de aviso como um todo) */
+.content-box {
+  width: 36%;
+  height: 31%;
+  width: 40%;
+  height: 40%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 1. O HEADER (A PARTE "ESCURA") */
+.content-header {
+  /* Um azul escuro, cor corporativa (ex: azul Ford) */
+  background-color: #8a93a0;
+  padding: 18px 18px;
+  text-align: start;
+  border-bottom: 2px solid #002855;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.content-header h2 {
+  color: #FFFFFF; /* Texto BRANCO */
+  font-weight: 600;
+  margin: 0; /* Remove as margens padrão */
+  font-size: 1.5rem;
+}
+
+/* 2. O BODY (A PARTE "BRANQUINHA") */
+.content-body {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 145px 30px; /* Mais espaço vertical */
+  text-align: center;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.welcome {
+  color: #004a9e; /* Azul mais vivo para o texto de boas-vindas */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Ícone do menu */
+.ph-list {
+  font-size: 2.5rem; /* aumenta o tamanho */
+  color: #23cf49;    /* azul Ford */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+

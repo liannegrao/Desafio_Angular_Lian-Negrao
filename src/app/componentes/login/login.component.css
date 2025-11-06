@@ -1,0 +1,291 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.car-img {
+  max-width: 90%;
+  height: auto;
+  opacity: 0.95;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.form-box {
+  width: 340px;
+  text-align: center;
+}
+
+.ford-logo {
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.welcome-text {
+  color: #00a86b;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.icon-input {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00a86b;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+  padding: 0.7rem 6rem 0.7rem 2.8rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #e5e2e2;
+}
+
+.form-control:focus {
+  border-color: #00a86b;
+  box-shadow: 0 0 5px rgba(0, 168, 106, 0.952);
+  background-color: #fffbfb;
+}
+
+/* Remove ícone de olho padrão dos navegadores */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00a86b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: #007a4f;
+}
+
+/* pequeno botão de informação dentro dos campos */
+.field-info {
+  position: absolute;
+  top: 50%;
+  right: -36px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #00a86b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.08s ease;
+}
+
+.field-info:hover {
+  background: rgba(0,168,106,0.06);
+  transform: translateY(-50%) translateY(-2px);
+}
+
+/* botão de informação menor (usado em campo senha, para não colidir com toggle eye) */
+.field-info--small {
+  right: -36px; /* afasta do toggle-eye */
+  width: 36px;
+  height: 36px;
+  bottom: 36px;
+}
+
+/* informação ligada ao switch */
+.form-check.form-switch {
+  position: relative; /* para posicionamento absoluto do switch-info */
+}
+
+.switch-info {
+  position: absolute;
+  right: -36px; /* fica à direita do switch */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #00a86b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .switch-info {
+    right: -40px; /* evita overflow em telas pequenas */
+    width: 32px;
+    height: 32px;
+  }
+  .field-info {
+    right: 8px;
+    width: 34px;
+    height: 34px;
+  }
+  .field-info--small {
+    right: 44px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* ✅ Toggle switch estilizado */
+.form-check-input {
+  appearance: none;
+  width: 50px;
+  height: 26px;
+  border-radius: 26px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-check-input::before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #4cd964;
+}
+
+.form-check-input:checked::before {
+  transform: translateX(24px);
+}
+
+.form-check-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+/* ✅ Botão Entrar no estilo da imagem */
+button.btn-primary {
+  background-color: #d3d3d3;
+  border: none;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.7rem;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 1%;
+  align-items: center;
+}
+
+button.btn-primary:hover {
+  background-color: #bcbcbc;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+button.btn-primary:active {
+  background-color: #a9a9a9;
+  transform: translateY(1px);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-check.form-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-left: 115px;
+  margin-bottom: 20px;
+}
+
+.form-check-label {
+  margin-right: 10px;
+  margin-left: 0 !important;
+}
+
+.erro-msg {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ✅ Efeito suave no ícone do olho ao alternar visibilidade */
+.toggle-password {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.toggle-password.active {
+  transform: scale(1.2) rotate(10deg);
+  color: #007a4f;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 40vh;
+  }
+
+  .right-side {
+    height: 60vh;
+  }
+
+  .car-img {
+    width: 80%;
+  }
+}
