@@ -4,12 +4,19 @@
 />
 
 <!-- Ícone do menu -->
-<i class="ph ph-list"></i>
+<i class="ph ph-list menu-icon" (click)="toggleMenu()"></i>
 
+<!-- Sidebar -->
+<div class="sidebar" *ngIf="menuAberto">
+  <ul>
+    <li (click)="irParaHome()"> Home</li>
+    <li (click)="irParaDashboard()"> Dashboard</li>
+  </ul>
+</div>
+
+<!-- Conteúdo principal -->
 <div class="home-container">
-
-<div class="content-box">
-
+  <div class="content-box">
     <div class="content-header">
       <h2>Sistema de dados FORD</h2>
     </div>
@@ -17,8 +24,6 @@
     <div class="content-body">
       <p class="welcome">Seja bem-vindo(a)!</p>
     </div>
-
   </div>
-
 </div>
 

@@ -4,8 +4,16 @@
 />
 
 <!-- Ícone do menu -->
-<i class="ph ph-list"></i>
+<i class="ph ph-list menu-icon" (click)="toggleMenu()"></i>
 
+<!-- Sidebar -->
+<div class="sidebar" *ngIf="menuAberto">
+  <ul>
+    <li (click)="irParaHome()"> Home</li>
+    <li (click)="irParaDashboard()"> Dashboard</li>
+  </ul>
+</div>
+<!-- Conteúdo principal -->
 <div class="dashboard-container">
   <h1>Dashboard FORD</h1>
 

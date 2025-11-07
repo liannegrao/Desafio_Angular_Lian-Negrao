@@ -145,3 +145,49 @@ tbody tr:nth-child(even) td {
   left: 20px;
   z-index: 1000;
 }
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #fdfdfd;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  box-shadow: 2px 0 6px rgba(58, 59, 66, 0.4);
+  animation: slideIn 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 8px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar li:hover {
+  background-color: #1d4ed8;
+}
+
+/* Animação */
+@keyframes slideIn {
+  from {
+    transform: translateX(-220px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.content-box {
+  margin-top: 60px;
+}
