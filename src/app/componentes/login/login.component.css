@@ -38,8 +38,8 @@
 }
 
 .welcome-text {
-  color: #00a86b;
-  font-weight: 600;
+  color: var(--cor-primaria);
+  font-weight: var(--peso-bold);
   margin-bottom: 35px;
 }
 

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  /* Fontes */
+  --font-principal: 'Segoe UI', sans-serif;
+  --font-secundaria: 'Prata', serif;
+
+  /* Paleta de cores — personalize aqui 👇 */
+  --cor-primaria: #00a86b;     /* verde usado no login */
+  --cor-secundaria: #004a9e;   /* azul usado no home */
+  --cor-clara: #ffffff;
+  --cor-escura: #2E2E2E;
+  --cor-cinza: #f9f9f9;
+
+  /* Pesos de fonte */
+  --peso-normal: 400;
+  --peso-bold: 700;
+}
+
+/* ====== Estilos base ====== */
+body {
+  font-family: var(--font-principal);
+  background-color: var(--cor-clara);
+  margin: 0;
+  padding: 0;
+  color: var(--cor-escura);
+}
