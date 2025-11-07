@@ -29,7 +29,7 @@
   padding: 18px 18px;
   text-align: start;
   border-bottom: 2px solid #002855;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-principal);
 }
 
 .content-header h2 {
@@ -46,11 +46,11 @@
   text-align: center;
   border-bottom-left-radius: 2%;
   border-bottom-right-radius: 2%;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-principal);
 }
 
 .welcome {
-  color: #004a9e; /* Azul mais vivo para o texto de boas-vindas */
+  color: var(--cor-secundaria); /* Azul mais vivo para o texto de boas-vindas */
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0;
@@ -59,7 +59,7 @@
 /* Ícone do menu */
 .ph-list {
   font-size: 2.5rem; /* aumenta o tamanho */
-  color: #23cf49;    /* azul Ford */
+  color: var(--cor-primaria);    /* azul Ford */
   cursor: pointer;
   position: absolute;
   top: 20px;
