@@ -1,0 +1,87 @@
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
+/>
+
+<!-- Ícone do menu -->
+<i class="ph ph-list menu-icon" (click)="toggleMenu()"></i>
+
+<!-- Fundo escuro ao abrir o menu -->
+<div class="sidebar-overlay" *ngIf="menuAberto" (click)="toggleMenu()"></div>
+
+<!-- Sidebar -->
+<nav class="sidebar" *ngIf="menuAberto">
+  <ul>
+    <li (click)="irParaHome()">Home</li>
+    <li (click)="irParaDashboard()">Dashboard</li>
+  </ul>
+</nav>
+
+<!-- Conteúdo principal -->
+<div class="dashboard-container">
+  <h1>Dashboard FORD</h1>
+
+  <div class="top-section">
+    <div class="select-section">
+      <label for="vehicle">Veículo</label>
+      <select id="vehicle" (change)="onSelectVehicle($event)">
+        <option hidden value="">Selecione</option>
+        <option *ngFor="let car of vehicles" [value]="car.id">
+          {{ car.vehicle }}
+        </option>
+      </select>
+    </div>
+
+    <div class="info-cards">
+      <div class="card">
+        <p>Total de Vendas</p>
+        <h2>{{ selectedVehicle?.volumetotal || 0 }} <span>Und.</span></h2>
+      </div>
+      <div class="card">
+        <p>Conectados</p>
+        <h2>{{ selectedVehicle?.connected || 0 }} <span>Und.</span></h2>
+      </div>
+      <div class="card">
+        <p>Update Software</p>
+        <h2>{{ selectedVehicle?.softwareUpdates || 0 }} <span>Und.</span></h2>
+      </div>
+    </div>
+  </div>
+
+ <div class="vehicle-image" *ngIf="selectedVehicle">
+  <img [src]="'http://localhost:3001/' + selectedVehicle.img" [alt]="selectedVehicle.vehicle" />
+</div>
+
+  <div class="table-section">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Buscar por código VIN"
+      [(ngModel)]="searchTerm"
+      (input)="filtrarPorVin()"
+    />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Código - VIN</th>
+          <th>Odômetro</th>
+          <th>Nível de Combustível</th>
+          <th>Status</th>
+          <th>Lat.</th>
+          <th>Long.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let car of filteredVehicles">
+          <td>{{ searchTerm }}</td>
+          <td>{{ car.odometro }} Km</td>
+          <td>{{ car.nivelCombustivel }}%</td>
+          <td>{{ car.status }}</td>
+          <td>{{ car.lat }}</td>
+          <td>{{ car.long }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

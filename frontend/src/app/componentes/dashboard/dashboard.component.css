@@ -1,9 +1,8 @@
 :host {
   display: block;
   height: 99vh;
-  overflow: hidden; /* impede barra de rolagem dentro do componente */
+  overflow: hidden;
 }
-
 
 .dashboard-container {
   text-align: center;
@@ -27,7 +26,6 @@ h1 {
   margin-bottom: 70px;
 }
 
-/* Seleção de veículo */
 .select-section {
   display: flex;
   flex-direction: column;
@@ -57,9 +55,15 @@ h1 {
 .card {
   width: 180px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
-  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.04);
 }
 
 .card p {
@@ -81,19 +85,26 @@ h1 {
 
 /* ---- Imagem ---- */
 .vehicle-image {
-  margin: 20px 0;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 
 .vehicle-image img {
   width: 800px;
-  height: auto;
+  max-width: 90%;
+  border-radius: 12px;
 }
 
 /* ---- Tabela ---- */
 .table-section {
   margin-top: 60px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .search-input {
@@ -102,7 +113,21 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0 8px;
-  margin-bottom: 12px;
+}
+
+.search-btn {
+  background-color: #003399;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #002080;
 }
 
 table {
@@ -110,9 +135,9 @@ table {
   margin: 0 auto;
   border-collapse: collapse;
   text-align: center;
+  font-size: 14px;
   border-radius: 6px;
   overflow: hidden;
-  font-size: 14px;
 }
 
 thead {
@@ -126,7 +151,6 @@ th {
 
 tbody td {
   background-color: #f5f5f5;
-  color: #000;
   border: 1px solid #ccc;
   padding: 8px;
 }
@@ -135,30 +159,37 @@ tbody tr:nth-child(even) td {
   background-color: #e8e8e8;
 }
 
-/* Ícone do menu */
-.ph-list {
-  font-size: 2.5rem; /* aumenta o tamanho */
-  color: #23cf49;    /* azul Ford */
+/* ---- Ícone do menu ---- */
+.menu-icon {
+  font-size: 2.5rem;
+  color: #003399;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
+  z-index: 1100;
+}
+
+/* Fundo escuro ao abrir menu */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1000;
 }
 
-/* Sidebar */
+/* ---- Sidebar ---- */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   width: 220px;
   height: 100vh;
-  background-color: #fdfdfd;
-  color: rgb(0, 0, 0);
+  background-color: #ffffff;
   padding: 20px;
-  box-shadow: 2px 0 6px rgba(58, 59, 66, 0.4);
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
   animation: slideIn 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .sidebar ul {
@@ -175,10 +206,11 @@ tbody tr:nth-child(even) td {
 }
 
 .sidebar li:hover {
-  background-color: #1d4ed8;
+  background-color: #003399;
+  color: #fff;
 }
 
-/* Animação */
+/* ---- Animação ---- */
 @keyframes slideIn {
   from {
     transform: translateX(-220px);
@@ -186,8 +218,4 @@ tbody tr:nth-child(even) td {
   to {
     transform: translateX(0);
   }
-}
-
-.content-box {
-  margin-top: 60px;
 }

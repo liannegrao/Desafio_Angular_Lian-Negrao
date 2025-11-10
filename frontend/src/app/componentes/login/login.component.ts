@@ -30,7 +30,7 @@ export class LoginComponent {
     const email = emailInput?.value.trim();
     const senha = senhaInput?.value.trim();
 
-    if (email === 'admin@ford.com' && senha === '1234') {
+    if (email === 'admin' && senha === '1234') {
       this.erro = '';
       this.router.navigate(['/home']);
     } else {
