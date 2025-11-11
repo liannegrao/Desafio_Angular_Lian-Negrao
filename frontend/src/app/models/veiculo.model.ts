@@ -5,7 +5,7 @@ export interface Veiculo {
   volumetotal: number | string;
   connected: number | string;
   softwareUpdates: number | string;
-  img: string; // ✅ Adicione esta linha
+  img: string; 
 }
 
 export interface Veiculos extends Array<Veiculo> {}

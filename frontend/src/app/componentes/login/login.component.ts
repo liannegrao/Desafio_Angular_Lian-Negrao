@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent {
   erro: string = '';
   mostrarSenha: boolean = false; // ✅ variável usada no HTML
 
-  constructor(private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   toggleSenha() {
     this.mostrarSenha = !this.mostrarSenha; // ✅ troca o tipo da senha

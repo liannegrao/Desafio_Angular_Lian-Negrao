@@ -24,8 +24,8 @@
   <div class="top-section">
     <div class="select-section">
       <label for="vehicle">Veículo</label>
-      <select id="vehicle" (change)="onSelectVehicle($event)">
-        <option hidden value="">Selecione</option>
+      <select id="vehicle" (change)="onSelectVehicle()" #carSelect>
+        <!-- <option hidden value="">Selecione</option> -->
         <option *ngFor="let car of vehicles" [value]="car.id">
           {{ car.vehicle }}
         </option>
@@ -49,7 +49,7 @@
   </div>
 
  <div class="vehicle-image" *ngIf="selectedVehicle">
-  <img [src]="'http://localhost:3001/' + selectedVehicle.img" [alt]="selectedVehicle.vehicle" />
+  <img [src]="'img/' + selectedVehicle.img" [alt]="selectedVehicle.vehicle" />
 </div>
 
   <div class="table-section">

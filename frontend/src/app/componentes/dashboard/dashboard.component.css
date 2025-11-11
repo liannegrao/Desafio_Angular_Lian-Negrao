@@ -159,17 +159,6 @@ tbody tr:nth-child(even) td {
   background-color: #e8e8e8;
 }
 
-/* ---- Ícone do menu ---- */
-.menu-icon {
-  font-size: 2.5rem;
-  color: #003399;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1100;
-}
-
 /* Fundo escuro ao abrir menu */
 .sidebar-overlay {
   position: fixed;
@@ -178,18 +167,37 @@ tbody tr:nth-child(even) td {
   z-index: 1000;
 }
 
-/* ---- Sidebar ---- */
+/* Ícone do menu */
+.ph-list {
+  font-size: 2.5rem; /* aumenta o tamanho */
+  color: var(--cor-primaria);    /* azul Ford */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.menu-icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin: 16px;
+  color: var(--cor-primaria);
+}
+
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   width: 220px;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #fdfdfd;
+  color: rgb(0, 0, 0);
   padding: 20px;
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 0 6px rgba(58, 59, 66, 0.4);
   animation: slideIn 0.3s ease-in-out;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 .sidebar ul {
@@ -206,11 +214,10 @@ tbody tr:nth-child(even) td {
 }
 
 .sidebar li:hover {
-  background-color: #003399;
-  color: #fff;
+  background-color: #1d4ed8;
 }
 
-/* ---- Animação ---- */
+/* Animação */
 @keyframes slideIn {
   from {
     transform: translateX(-220px);
@@ -218,4 +225,8 @@ tbody tr:nth-child(even) td {
   to {
     transform: translateX(0);
   }
+}
+
+.content-box {
+  margin-top: 60px;
 }
