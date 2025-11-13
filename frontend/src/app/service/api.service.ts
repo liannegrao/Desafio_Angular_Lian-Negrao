@@ -9,8 +9,15 @@ import { CarByVin } from '../models/carbyvin.model';
   providedIn: 'root'
 })
 export class ApiService {
-  private readonly apiURL = 'http://localhost:3002';
   private readonly http = inject(HttpClient);
+
+  // Detecta se está em produção (Vercel) ou desenvolvimento
+  private get apiURL(): string {
+    const isProduction = !window.location.hostname.includes('localhost') &&
+                        !window.location.hostname.includes('127.0.0.1');
+
+    return isProduction ? '' : 'http://localhost:3002';
+  }
 
   // 🔹 Login
   login(nome: string, senha: string): Observable<Usuario> {
