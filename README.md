@@ -59,8 +59,8 @@ Este projeto é um sistema de dashboard para monitoramento de frota de veículos
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/liannegrao/Desafio_Angular_Lian-Negrao---Teste.git
-cd Desafio_Angular_Lian-Negrao---Teste
+git clone https://github.com/liannegrao/Desafio_Angular_Lian-Negrao.git
+cd Desafio_Angular_Lian-Negrao
 ```
 
 ### 2. Instale as dependências
@@ -119,7 +119,7 @@ npm run json-server # Inicia apenas o JSON Server
 
 ### Credenciais de Login
 - **Usuário**: `admin`
-- **Senha**: `123456`
+- **Senha**: `1234`
 
 ### Endpoints da API
 
