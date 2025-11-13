@@ -204,28 +204,49 @@ npm run build         # Se aplicável
 
 ## 🚀 Deploy
 
-### Vercel (Recomendado - Frontend + Backend)
-O projeto está configurado para deploy completo no Vercel usando **Vercel Functions**:
+### Arquitetura Atual: Vercel + Render
+
+O projeto usa uma arquitetura híbrida para melhor performance:
+
+- 🌐 **Frontend**: Vercel (Static Site)
+- 🚀 **Backend**: Render (Web Service)
+
+### Vercel - Frontend (Angular)
 
 1. **Conecte seu repositório GitHub ao Vercel**
-2. **Vercel detectará automaticamente:**
-   - ✅ Frontend Angular (`frontend/`)
-   - ✅ API Serverless (`api/`)
-   - ✅ Configurações (`vercel.json`)
+2. **Selecione apenas a pasta `frontend/`** para deploy
+3. **Deploy automático** - Toda alteração será deployada
 
-3. **Deploy automático** - Toda alteração no `main` será deployada
+### Render - Backend (API)
+
+#### Opção 1: Git-based Deploy (Recomendado)
+1. **Crie uma conta gratuita** no [render.com](https://render.com)
+2. **Crie um novo Web Service**
+3. **Conecte seu repositório GitHub**
+4. **Configure:**
+   - **Runtime**: Node.js
+   - **Build Command**: `cd backend && npm install`
+   - **Start Command**: `cd backend && npm start`
+   - **Root Directory**: `backend/`
+
+#### Opção 2: Usando render.yaml
+1. **Faça upload** do arquivo `render.yaml` no Render
+2. **Render detectará** automaticamente as configurações
 
 **URLs após deploy:**
-- 🌐 **Frontend**: `https://seu-projeto.vercel.app`
-- 🚀 **API**: `https://seu-projeto.vercel.app/api/*`
+- 🌐 **Frontend**: `https://seu-app.vercel.app`
+- 🚀 **API**: `https://sua-api.onrender.com`
 
 ### Desenvolvimento Local
 ```bash
-# Para desenvolvimento (com backend local)
-npm run dev
+# Backend local
+cd backend && npm start
 
-# Para produção (simula Vercel)
-npm run build
+# Frontend local
+cd frontend && npm start
+
+# Ou usar ambos
+npm run dev
 ```
 
 ## 🤝 Contribuição

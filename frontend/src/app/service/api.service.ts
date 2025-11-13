@@ -11,13 +11,8 @@ import { CarByVin } from '../models/carbyvin.model';
 export class ApiService {
   private readonly http = inject(HttpClient);
 
-  // Detecta se está em produção (Vercel) ou desenvolvimento
-  private get apiURL(): string {
-    const isProduction = !window.location.hostname.includes('localhost') &&
-                        !window.location.hostname.includes('127.0.0.1');
-
-    return isProduction ? '' : 'http://localhost:3002';
-  }
+  // URL da API no Render (substitua pela sua URL real)
+  private readonly apiURL = 'https://sua-api-render.onrender.com';
 
   // 🔹 Login
   login(nome: string, senha: string): Observable<Usuario> {
