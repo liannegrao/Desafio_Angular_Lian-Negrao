@@ -204,18 +204,28 @@ npm run build         # Se aplicável
 
 ## 🚀 Deploy
 
-### Frontend (Vercel/Netlify)
-```bash
-cd frontend
-npm run build --prod
-# Faça upload da pasta dist/ para sua plataforma
-```
+### Vercel (Recomendado - Frontend + Backend)
+O projeto está configurado para deploy completo no Vercel usando **Vercel Functions**:
 
-### Backend (Heroku/Railway)
+1. **Conecte seu repositório GitHub ao Vercel**
+2. **Vercel detectará automaticamente:**
+   - ✅ Frontend Angular (`frontend/`)
+   - ✅ API Serverless (`api/`)
+   - ✅ Configurações (`vercel.json`)
+
+3. **Deploy automático** - Toda alteração no `main` será deployada
+
+**URLs após deploy:**
+- 🌐 **Frontend**: `https://seu-projeto.vercel.app`
+- 🚀 **API**: `https://seu-projeto.vercel.app/api/*`
+
+### Desenvolvimento Local
 ```bash
-cd backend
-# Configure seu servidor de produção
-npm start
+# Para desenvolvimento (com backend local)
+npm run dev
+
+# Para produção (simula Vercel)
+npm run build
 ```
 
 ## 🤝 Contribuição
