@@ -1,0 +1,13 @@
+{
+  "name": "desafio-angular-lian-negrao",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && node api.js",
+    "frontend": "cd frontend && ng serve"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
