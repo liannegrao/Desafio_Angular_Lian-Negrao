@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "backend": "cd backend && node api.js",
-    "frontend": "cd frontend && ng serve"
+    "start": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run json-server\"",
+    "backend": "cd backend && npm run backend",
+    "frontend": "cd frontend && npx ng serve --port 4200",
+    "json-server": "cd backend && npm run json-server",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run json-server\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
