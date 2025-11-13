@@ -102,6 +102,13 @@ tsconfig.tsbuildinfo
 .backend/.prisma/
 
 # =====================================
+# RAIZ DO PROJETO
+# =====================================
+
+# Dependências da raiz
+node_modules/
+
+# =====================================
 # SISTEMA / GERAL
 # =====================================
 

@@ -15,28 +15,34 @@ export class LoginComponent {
   email: string = '';
   senha: string = '';
   lembrar: boolean = false;
-  erro: string = '';
-  mostrarSenha: boolean = false; // ✅ variável usada no HTML
+  mostrarSenha: boolean = false;
+  mostrarMensagem: boolean = false;
+  mensagemSucesso: boolean = false;
+  mensagemTexto: string = '';
 
   constructor(private apiService: ApiService, private router: Router) {}
 
   toggleSenha() {
-    this.mostrarSenha = !this.mostrarSenha; // ✅ troca o tipo da senha
+    this.mostrarSenha = !this.mostrarSenha;
   }
-  entrar() {
-    // Captura os valores dos inputs diretamente do DOM (já que o HTML não pode mudar)
-    const emailInput = document.querySelector('input[type="email"]') as HTMLInputElement;
-    const senhaInput = document.querySelector('input[placeholder="Insira sua senha"]') as HTMLInputElement;
 
-    const email = emailInput?.value.trim();
-    const senha = senhaInput?.value.trim();
+  entrar() {
+    const email = this.email.trim();
+    const senha = this.senha.trim();
 
     if (email === 'admin' && senha === '1234') {
-      this.erro = '';
-      this.router.navigate(['/home']);
+      this.mensagemSucesso = true;
+      this.mensagemTexto = 'Login realizado com sucesso!';
+      this.mostrarMensagem = true;
+
+      // Redirecionar após um pequeno delay para mostrar a mensagem
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 1500);
     } else {
-      this.erro = 'E-mail ou senha inválidos.';
-      alert(this.erro);
+      this.mensagemSucesso = false;
+      this.mensagemTexto = 'Username ou senha inválido.';
+      this.mostrarMensagem = true;
     }
   }
 }
