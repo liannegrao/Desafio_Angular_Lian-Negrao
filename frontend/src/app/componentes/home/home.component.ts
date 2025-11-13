@@ -26,4 +26,9 @@ export class HomeComponent {
     this.menuAberto = false;
     this.router.navigate(['/home']);
   }
+  sairConta(): void {
+  // Fecha o menu e redireciona para login
+  this.menuAberto = false;
+  this.router.navigate(['/login']);
+ }
 }

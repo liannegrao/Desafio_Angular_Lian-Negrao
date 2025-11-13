@@ -8,6 +8,12 @@
 
 <!-- Sidebar -->
 <div class="sidebar" *ngIf="menuAberto">
+  <div class="sidebar-logo">
+    <img src="img/ford.png" alt="Ford Logo" />
+  </div>
+  <div class="logout-section" (click)="sairConta()">
+    <i class="ph ph-sign-out"></i>
+  </div>
   <ul>
     <li (click)="irParaHome()"> Home</li>
     <li (click)="irParaDashboard()"> Dashboard</li>

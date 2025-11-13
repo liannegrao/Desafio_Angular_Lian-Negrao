@@ -230,3 +230,41 @@ tbody tr:nth-child(even) td {
 .content-box {
   margin-top: 60px;
 }
+
+/* === Logo da Ford no sidebar === */
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.sidebar-logo img {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+/* === Botão de sair === */
+.logout-section {
+  position: absolute;
+  bottom: 65px;
+  left: 80%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-section i {
+  font-size: 36px;
+  color: #1d4ed8; /* Azul Ford */
+  transition: color 0.2s, transform 0.2s;
+}
+
+.logout-section:hover i {
+  color: #002855;
+  transform: scale(1.1);
+}
