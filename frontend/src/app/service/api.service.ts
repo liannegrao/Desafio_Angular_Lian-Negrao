@@ -12,7 +12,7 @@ export class ApiService {
   private readonly http = inject(HttpClient);
 
   // URL da API no Render (substitua pela sua URL real)
-  private readonly apiURL = 'https://sua-api-render.onrender.com';
+  private readonly apiURL = 'https://desafio-angular-lian-negrao.onrender.com';
 
   // 🔹 Login
   login(nome: string, senha: string): Observable<Usuario> {
