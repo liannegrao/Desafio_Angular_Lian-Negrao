@@ -4,6 +4,7 @@ import { Observable, map } from 'rxjs';
 import { Usuario } from '../models/usuario.model';
 import { Veiculos, VeiculosAPI } from '../models/veiculo.model';
 import { CarByVin } from '../models/carbyvin.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ import { CarByVin } from '../models/carbyvin.model';
 export class ApiService {
   private readonly http = inject(HttpClient);
 
-  // URL da API no Render (substitua pela sua URL real)
-  private readonly apiURL = 'https://desafio-angular-lian-negrao.onrender.com';
+  // URL da API baseada no ambiente (desenvolvimento ou produção)
+  private readonly apiURL = environment.apiUrl;
 
   // 🔹 Login
   login(nome: string, senha: string): Observable<Usuario> {
