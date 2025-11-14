@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run json-server\"",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run json-server\"",
     "build": "cd frontend && npm run build",
     "backend": "cd backend && npm run backend",
