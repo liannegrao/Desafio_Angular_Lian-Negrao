@@ -218,7 +218,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 **Lian Negrao**
 - GitHub: [@liannegrao](https://github.com/liannegrao)
-- LinkedIn: [Seu LinkedIn]
+- LinkedIn: [www.linkedin.com/in/lian-messias-rebouças-negrão-2b9aa6378]
 
 ## 🙏 Agradecimentos
 
