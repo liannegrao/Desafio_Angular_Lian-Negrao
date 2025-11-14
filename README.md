@@ -202,38 +202,6 @@ cd backend
 npm run build         # Se aplicável
 ```
 
-## 🚀 Deploy
-
-### Arquitetura Atual: Vercel (Frontend + Serverless Functions)
-
-O projeto usa uma arquitetura unificada no Vercel para máxima simplicidade:
-
-- 🌐 **Frontend**: Vercel (Static Site)
-- 🚀 **Backend**: Vercel (Serverless Functions)
-
-### Deploy Automático no Vercel
-
-1. **Conecte seu repositório GitHub ao Vercel**
-2. **Vercel detectará automaticamente:**
-   - ✅ Frontend Angular (`frontend/`)
-   - ✅ API Serverless (`api/`)
-   - ✅ Configurações (`vercel.json`)
-
-3. **Deploy automático** - Toda alteração no `main` será deployada
-
-**URLs após deploy:**
-- 🌐 **Frontend**: `https://seu-projeto.vercel.app`
-- 🚀 **API**: `https://seu-projeto.vercel.app/api/*`
-
-### Desenvolvimento Local
-```bash
-# Para desenvolvimento (com backend local)
-npm run dev
-
-# Para produção (simula Vercel)
-npm run build
-```
-
 ## 🤝 Contribuição
 
 1. Fork o projeto
