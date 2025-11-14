@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run json-server\"",
-    "build": "cd frontend && npm run build --prod",
+    "build": "cd frontend && npm run build",
     "backend": "cd backend && npm run backend",
     "frontend": "cd frontend && npx ng serve --port 4200",
     "json-server": "cd backend && npm run json-server"

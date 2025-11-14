@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://desafio-angular-lian-negrao.onrender.com'
+  apiUrl: '' // Usa caminhos relativos (/api/*) para Vercel Functions
 };
