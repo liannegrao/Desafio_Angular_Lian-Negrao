@@ -14,7 +14,5 @@
       "src": "/(.*)",
       "dest": "/dist/angular/$1"
     }
-  ],
-  "functions": {},
-  "regions": ["iad1"]
+  ]
 }
