@@ -30,7 +30,7 @@ export class LoginComponent {
     const email = this.email.trim();
     const senha = this.senha.trim();
 
-    if (email === 'admin' && senha === '1234') {
+    if (email === 'admin' && senha === '123456') {
       this.mensagemSucesso = true;
       this.mensagemTexto = 'Login realizado com sucesso!';
       this.mostrarMensagem = true;

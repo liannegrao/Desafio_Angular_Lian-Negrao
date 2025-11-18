@@ -119,7 +119,7 @@ npm run json-server # Inicia apenas o JSON Server
 
 ### Credenciais de Login
 - **Usuário**: `admin`
-- **Senha**: `1234`
+- **Senha**: `123456`
 
 ### Endpoints da API
 
